@@ -1,18 +1,34 @@
 import './App.css';
 
 function App() {
+  // WORKING WITH LIST
 
-  const age = 14;
-  const isGreen = false;
-
-  return (
+  const names = [ "Mauricio", "Kristel", "Javier", "Fanny"];
+  return(
     <div className="App">
-      { age >= 18 ? <h1>Puedes Votar!</h1> : <h1>No puedes Votar!</h1> }
-      <h1 style={{ color: isGreen ? "green" : "red" }}>This is a color</h1>
-
-      {isGreen && <button>This is a Button</button>}
+      { names.map( (name, key) => {
+        return <h1 key= {key}> {name} </h1>
+      }) }
     </div>
   );
+
+
+
+  // EXAMPLE FOR CONDITIONALS
+
+  // const age = 14;
+  // const isGreen = false;
+
+  // return (
+  //   <div className="App">
+  //     { age >= 18 ? <h1>Puedes Votar!</h1> : <h1>No puedes Votar!</h1> }
+  //     <h1 style={{ color: isGreen ? "green" : "red" }}>This is a color</h1>
+
+  //     {isGreen && <button>This is a Button</button>}
+  //   </div>
+  // );
+
+  // EXAMPLE FOR PASSING ARGUMENTS THROUGH COMPONENTS
 
   // return (
   // <div className="App">
